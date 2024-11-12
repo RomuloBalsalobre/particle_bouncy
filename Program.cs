@@ -17,8 +17,6 @@ namespace program
             while(true)
             {
                 Console.Clear();
-
-
                 if (particula._position[1] == mapa._tamanho[1])
                 {
                     particula._newPosition(particula._position[0],0);
