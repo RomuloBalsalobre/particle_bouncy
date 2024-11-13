@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("particle_simulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c9943f1447e4f0f0a2ff5e59d9323fe18f0f84e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b2e08f8aa2946695801b04f1c322e7784f75cab")]
 [assembly: System.Reflection.AssemblyProductAttribute("particle_simulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("particle_simulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

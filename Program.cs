@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using map;
 using particle;
 
@@ -8,35 +10,37 @@ namespace program
     {
         static void Main(String[] args)
         {
+            int sentidox = 1;
+            int sentidoy = 1;
             Map mapa = new Map();
             Particle particula = new Particle();
-            particula._newPosition(0,0);
-            mapa._terreno = "^";
-            mapa._setTamanho(8,8);
-
+            particula._newPosition(2,1);
+            mapa._terreno = "~";
+            mapa._setTamanho(20,5);
+            int x = particula._position[0];
+            int y = particula._position[1];
             while(true)
             {
                 Console.Clear();
-                if (particula._position[1] == mapa._tamanho[1])
+                if (x == 0)
                 {
-                    particula._newPosition(particula._position[0],0);
-                    mapa._terreno = ";";
+                    sentidox*=-1;
                 }
-                if (particula._position[1] < 0)
+                if (y == mapa._tamanho[1]-1)
                 {
-                    particula._newPosition(particula._position[0],mapa._tamanho[1]-1);
-                    mapa._terreno = "^";
+                    sentidoy *= -1;
                 }
-                if  (particula._position[0]== mapa._tamanho[0])
+                if (y < 1)
                 {
-                    particula._newPosition(0,particula._position[1]);
-                    mapa._terreno = "~";
+                    sentidoy *= -1;
+                }
+                if  (x== mapa._tamanho[0])
+                {
+                    sentidox *= -1;
                 }
 
-                mapa.Create(particula._position[0],
-                            particula._position[1],
-                            particula._forma);
-                ConsoleKeyInfo move =  Console.ReadKey(true);
+                mapa.Create(x,y,particula._forma);
+                /*ConsoleKeyInfo move =  Console.ReadKey(true);
 
                 switch(move.Key)
                 {
@@ -52,7 +56,11 @@ namespace program
                     case ConsoleKey.DownArrow:
                         particula._newPosition(particula._position[0]+1,particula._position[1]);
                         continue;
-                }
+                }*/
+                y+=1*sentidoy;
+                x+=1*sentidox;
+                particula._newPosition(x,y);
+                Thread.Sleep(100);
             }
         }
     }

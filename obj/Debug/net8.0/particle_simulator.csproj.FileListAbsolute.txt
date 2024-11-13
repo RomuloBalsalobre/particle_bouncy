@@ -12,3 +12,4 @@
 /home/h0m4/Documentos/Repositório/csharp_fundamentals/particle_simulator/obj/Debug/net8.0/particle_simulator.pdb
 /home/h0m4/Documentos/Repositório/csharp_fundamentals/particle_simulator/obj/Debug/net8.0/particle_simulator.genruntimeconfig.cache
 /home/h0m4/Documentos/Repositório/csharp_fundamentals/particle_simulator/obj/Debug/net8.0/ref/particle_simulator.dll
+/home/h0m4/Documentos/Repositório/csharp_fundamentals/particle_simulator/obj/Debug/net8.0/particle_simulator.sourcelink.json
